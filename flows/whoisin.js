@@ -57,7 +57,7 @@ module.exports = (slapp) => {
           text: '',
           fallback: text,
           callback_id: 'in_or_out_callback',
-          color: '#47EEBC',
+          color: '#FFCC33',
           actions: []
         }
       }
