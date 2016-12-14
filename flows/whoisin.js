@@ -3,7 +3,7 @@ const os = require('os')
 
 module.exports = (slapp) => {
 
-  slapp.command('/inorout', /.*/, (msg, text) => {
+  slapp.command('/letsride', /.*/, (msg, text) => {
     var lines = msg.body.text.split(os.EOL).map((it) => { return it.trim() })
     var text = lines[0] || 'In or Out?'
 
