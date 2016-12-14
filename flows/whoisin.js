@@ -83,7 +83,7 @@ module.exports = (slapp) => {
       if (err) return msg.respond(`Sorry, something went wrong. Try again? (${err.message || err})`)
 
       // add original question as title to first attachment
-      attachments[0].title = msg.body.original_message.text
+      attachments[0].title = msg.body.original_message
       
       // add author information as footer to first attachment
       attachments[0].footer = `proposed by ${data.user.profile.real_name || data.user.name}`
