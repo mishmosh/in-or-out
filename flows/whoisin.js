@@ -82,8 +82,8 @@ module.exports = (slapp) => {
     slapp.client.users.info({ token: msg.meta.bot_token, user: msg.meta.user_id }, (err, data) => {
       if (err) return msg.respond(`Sorry, something went wrong. Try again? (${err.message || err})`)
 
-      // add author information to first attachment
-      attachments[0].author_name = `proposed by ${data.user.profile.real_name || data.user.name}`
+      // add author information as footer to first attachment
+      attachments[0].footer = `proposed by ${data.user.profile.real_name || data.user.name}`
       //attachments[0].author_icon = data.user.profile.image_24,
 
       msg.say({
