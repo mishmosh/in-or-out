@@ -2,20 +2,20 @@
 
 module.exports = (slapp) => {
 
-  let help = `In or Out is pretty simple. Ask question with the \`/inorout\` command:
+  let help = `Let's ride is pretty simple. Ask question with the \`/letsride\` command:
 \`\`\`
-/inorout [type your question here]
+/letsride [type your question here]
 [answer 1]
 [answer 2]
 [...]
 \`\`\`
 
-Up to 15 answers may go on following lines (shift-enter or ctrl-enter or return on mobile).
+By default, In and Out buttons are created. Create custom buttons (up to 15 of them) by listing them on new lines (shift-enter or ctrl-enter or return on mobile).
 
 For example:
 
 \`\`\`
-/inorout What time should we meet?
+/letsride What time should we meet?
 10:30AM PST
 2:00PM PST
 :no_entry: never
@@ -23,12 +23,10 @@ For example:
 
 Choose a button option and results are aggregated under the question.
 
-":arrow_heading_down: move to bottom" moves the question down to the bottom of the stream.
-
 Like this! https://goo.gl/ucnthN
 `
 
-  slapp.command('/inorout', /^\s*help\s*$/, (msg) => {
+  slapp.command('/letsride', /^\s*help\s*$/, (msg) => {
     msg.respond(help)
   })
 
