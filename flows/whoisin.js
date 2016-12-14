@@ -81,9 +81,6 @@ module.exports = (slapp) => {
 
     slapp.client.users.info({ token: msg.meta.bot_token, user: msg.meta.user_id }, (err, data) => {
       if (err) return msg.respond(`Sorry, something went wrong. Try again? (${err.message || err})`)
-
-      // add original question as text to first attachment
-      attachments[0].text = msg.body.original_message.text
       
       // add author information as footer to first attachment
       attachments[0].footer = `proposed by ${data.user.profile.real_name || data.user.name}`
