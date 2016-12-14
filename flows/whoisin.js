@@ -83,8 +83,8 @@ module.exports = (slapp) => {
       if (err) return msg.respond(`Sorry, something went wrong. Try again? (${err.message || err})`)
 
       // add author information to first attachment
-      attachments[0].author_name = `asked by ${data.user.profile.real_name || data.user.name}`
-      attachments[0].author_icon = data.user.profile.image_24,
+      attachments[0].author_name = `proposed by ${data.user.profile.real_name || data.user.name}`
+      //attachments[0].author_icon = data.user.profile.image_24,
 
       msg.say({
         text: text,
