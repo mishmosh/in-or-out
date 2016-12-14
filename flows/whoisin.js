@@ -67,17 +67,17 @@ module.exports = (slapp) => {
     let bottomActions = [{ name: 'recycle', text: ':arrow_heading_down: Move to bottom', type: 'button' }]
 
     // only show hasn't answered for channels (kinda hackish :/ )
-    if (msg.meta.channel_id[0] === 'C') {
-      bottomActions.push({ name: 'unaccounted', text: ':thinking_face: Hasn\'t answered?', type: 'button' })
-    }
+    //if (msg.meta.channel_id[0] === 'C') {
+    //  bottomActions.push({ name: 'unaccounted', text: ':thinking_face: Who hasn\'t answered?', type: 'button' })
+    //}
 
     // move to the bottom button
-    attachments.push({
-      text: '',
-      fallback: 'move to the bottom',
-      callback_id: 'in_or_out_callback',
-      actions: bottomActions
-    })
+    //attachments.push({
+    //  text: '',
+    //  fallback: 'move to the bottom',
+    //  callback_id: 'in_or_out_callback',
+    //  actions: bottomActions
+    //})
 
     slapp.client.users.info({ token: msg.meta.bot_token, user: msg.meta.user_id }, (err, data) => {
       if (err) return msg.respond(`Sorry, something went wrong. Try again? (${err.message || err})`)
