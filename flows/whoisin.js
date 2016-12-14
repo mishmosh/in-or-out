@@ -255,6 +255,6 @@ class AttachmentLine {
 
   string() {
     let dots = ''
-    return '*' + this.count() + '*' + ' ' + this.answer +  ' » ' + this.entries.join(', ')
+    return '*' + this.count() + '*' + ' rider(s) ' + this.answer +  ' » ' + this.entries.join(', ')
   }
 }
